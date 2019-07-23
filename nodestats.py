@@ -3,7 +3,7 @@
 #This script is for use with the UGE job processing environment.
 #This will pull all of the servers associated with a certain queue (*@@schneider in this case).
 #It will present each machine, and how many cores are available for processing on it.
-#It will also give a break down of usage by user at the server list.
+#It will also give a break down of usage by user after the server list.
 
 import os
 import numpy as np
