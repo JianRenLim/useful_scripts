@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
 
-#This script is for use with the UGE job processing environment.
-#This will pull all of the servers associated with a certain queue (*@@schneider in this case).
-#It will present each machine, and how many cores are available for processing on it.
-#It will also give a break down of usage by user after the server list.
-
 import os
 import numpy as np
 import math
 
-f = os.popen('qstat -f -U $USER -q *@@schneider',"r") #Change *@@schneider to your queue.
+f = os.popen('qstat -f -U $USER -q *@@schneider',"r")
 usedt = 0
 totalt = 0
 freet = 0
@@ -41,7 +36,7 @@ print('Total \t\t {0} \t {1} \t {2}'.format(totalt,usedt,freet))
 print('-----------------------------------------------')
 print('###############################################')
 
-f = os.popen('qstat -f -U $USER -q *@@schneider',"r")  #Change *@@schneider to your queue.
+f = os.popen('qstat -f -U $USER -q *@@schneider',"r")
 qlines = []
 
 alllines=f.readlines()
